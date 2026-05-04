@@ -344,7 +344,7 @@ const NextButton = ({ target, label = "Continue" }) => (
             value={bill.name} 
             onChange={e => setMonthlyBills(monthlyBills.map(b => b.id === bill.id ? {...b, name: e.target.value} : b))} 
             className="editable-input flex-1 min-w-[140px] text-sm" 
-            placeholder="Nombre del Gasto" 
+            placeholder="Bill Name" 
         />
         
         {/* Amount container - increased from w-32 to w-40 and added a min-width */}
@@ -370,7 +370,7 @@ const NextButton = ({ target, label = "Continue" }) => (
                                         </div>
                                         <div className="mt-8 pt-6 border-t border-slate-100 flex justify-between items-center">
                                             <span className="text-xs font-bold text-slate-400 uppercase">Calculated Base Rate:</span>
-                                            <span className="text-xl font-black text-brand-black">${totalRequiredPerHour.toFixed(2)} /hr</span>
+                                            <span className="text-xl font-black text-brand-black">£{totalRequiredPerHour.toFixed(2)} /hr</span>
                                         </div>
                                     </div>
                                 </div>
@@ -513,7 +513,7 @@ const unit = liquidItem ? 'ml' : 'pcs';
                                         <div className="flex items-center gap-6 p-6 bg-brand-gray/50 rounded-3xl border border-slate-100">
                                             <div className="flex-1">
                                                 <p className="text-[10px] font-black text-brand-main uppercase tracking-widest">Suggested Service Price</p>
-                                                <p className="text-4xl font-black text-brand-black">${Math.ceil(currentPrice.total)}</p>
+                                                <p className="text-4xl font-black text-brand-black">£{Math.ceil(currentPrice.total)}</p>
                                             </div>
                                             <button 
                                                 onClick={saveService}
@@ -548,16 +548,16 @@ const unit = liquidItem ? 'ml' : 'pcs';
                                             <div className="space-y-4 mb-4">
                                                 <div className="flex justify-between items-center text-xs opacity-60 font-bold uppercase">
                                                     <span>Labor & Overhead</span>
-                                                    <span>${currentPrice.labor.toFixed(2)}</span>
+                                                    <span>£{currentPrice.labor.toFixed(2)}</span>
                                                 </div>
                                                 <div className="flex justify-between items-center text-xs opacity-60 font-bold uppercase">
                                                     <span>Product Cost</span>
-                                                    <span>${currentPrice.products.toFixed(2)}</span>
+                                                    <span>£{currentPrice.products.toFixed(2)}</span>
                                                 </div>
                                                 <div className="h-px bg-white/10"></div>
                                                 <div className="flex justify-between items-center text-sm font-black text-brand-lime uppercase">
                                                     <span>Est. Net Profit</span>
-                                                    <span>${(Math.ceil(currentPrice.total) - (currentPrice.total - currentPrice.labor)).toFixed(2)}</span>
+                                                    <span>£{(Math.ceil(currentPrice.total) - (currentPrice.total - currentPrice.labor)).toFixed(2)}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -592,7 +592,7 @@ const unit = liquidItem ? 'ml' : 'pcs';
                                                 <div className="flex items-center gap-6">
                                                     <div className="text-right">
                                                         <p className="text-[10px] font-black text-brand-main uppercase tracking-widest mb-1">Target Price</p>
-                                                        <p className="text-3xl font-black text-brand-black leading-none">${Math.ceil(svc.calculated.total)}</p>
+                                                        <p className="text-3xl font-black text-brand-black leading-none">£{Math.ceil(svc.calculated.total)}</p>
                                                     </div>
                                                     <button onClick={() => setSavedServices(savedServices.filter(s => s.id !== svc.id))} className="text-slate-200 hover:text-red-400 transition-colors">
                                                         <Icon name="trash-2" size={20} />
