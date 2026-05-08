@@ -113,7 +113,7 @@
                     <Icon name="check" size={32} className="text-brand-main" />
                 </div>
                 <h3 className="text-2xl font-black text-brand-black uppercase tracking-tight mb-2">Service Saved!</h3>
-                <p className="text-slate-500 text-sm mb-8">This service has been calculated and added to your Price Menu.</p>
+                <p className="text-slate-500 text-sm mb-8">This service has been calculated and added to your List of Services.</p>
                 <div className="space-y-3">
                     <button 
                         onClick={onClose}
@@ -125,7 +125,7 @@
                         onClick={onGoToMenu}
                         className="w-full bg-brand-main text-white py-4 rounded-2xl font-bold uppercase text-xs tracking-widest hover:bg-brand-black transition-colors"
                     >
-                        Go See Menu
+                        Go See List of Services
                     </button>
                 </div>
             </div>
@@ -508,7 +508,7 @@ const unit = liquidItem ? 'ml' : 'pcs';
                                     </div>
 
                                     <div className="bg-white p-8 rounded-[32px] shadow-sm border border-slate-100">
-                                        <h3 className="text-lg font-black uppercase tracking-tight mb-4">Step C: Finalize</h3>
+                                        <h3 className="text-lg font-black uppercase tracking-tight mb-4">Step C: Finalise</h3>
                                         <p className="text-sm text-slate-500 mb-6">Review your calculated benchmark and save it to your master price list.</p>
                                         <div className="flex items-center gap-6 p-6 bg-brand-gray/50 rounded-3xl border border-slate-100">
                                             <div className="flex-1">
@@ -520,7 +520,7 @@ const unit = liquidItem ? 'ml' : 'pcs';
                                                 disabled={!service.name || !service.duration}
                                                 className="bg-brand-main hover:bg-brand-black text-white px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest shadow-xl transition-all disabled:opacity-30 flex items-center gap-2"
                                             >
-                                                <Icon name="plus-circle" size={16} /> Add to Price Menu
+                                                <Icon name="plus-circle" size={16} /> Add to List of Services
                                             </button>
                                         </div>
                                     </div>
@@ -531,7 +531,7 @@ const unit = liquidItem ? 'ml' : 'pcs';
                                             onClick={() => handleForwardNav('menu')}
                                             className="text-brand-main font-black uppercase text-xs tracking-widest flex items-center gap-2"
                                         >
-                                            Go to Price Menu <Icon name="arrow-right" size={14} />
+                                            Go to List of Services <Icon name="arrow-right" size={14} />
                                         </button>
                                     </div>
                                 </div>
@@ -612,29 +612,29 @@ const unit = liquidItem ? 'ml' : 'pcs';
                                     <div className="flex gap-6">
                                         <div className="w-10 h-10 rounded-full bg-brand-main text-white flex items-center justify-center font-black shrink-0">1</div>
                                         <div>
-                                            <h4 className="font-black uppercase text-sm mb-1">Set Your Worth</h4>
-                                            <p className="text-slate-500 text-sm">Start in <b className="text-brand-black font-bold uppercase text-[12px]">Goals</b>. Tell the lab how much you want to take home per hour and list your fixed bills (rent, software, insurance). This creates your <b className="text-brand-main font-bold">Business Base Rate</b>.</p>
+                                            <h4 className="font-black uppercase text-sm mb-1">Set Your Value</h4>
+                                            <p className="text-slate-500 text-sm">Start in <b className="text-brand-black font-bold uppercase text-[12px]">Goals</b>. Tell the lab how much you want to earn per hour and list your fixed overheads (rent, software, insurance). This calculates your <b className="text-brand-main font-bold">Business Base Rate</b>.</p>
                                         </div>
                                     </div>
                                     <div className="flex gap-6">
                                         <div className="w-10 h-10 rounded-full bg-brand-main text-white flex items-center justify-center font-black shrink-0">2</div>
                                         <div>
                                             <h4 className="font-black uppercase text-sm mb-1">Manage the Stockroom</h4>
-                                            <p className="text-slate-500 text-sm">List your wholesale inventory in the <b className="text-brand-black font-bold uppercase text-[12px]">Stockroom</b>. The lab calculates the cost of every unit of solution and every individual disposable item you use.</p>
+                                            <p className="text-slate-500 text-sm">List your wholesale supplies in the <b className="text-brand-black font-bold uppercase text-[12px]">Stockroom</b>. The Lab automatically calculates the cost of every millilitre of product and every single disposable item you use.</p>
                                         </div>
                                     </div>
                                     <div className="flex gap-6">
                                         <div className="w-10 h-10 rounded-full bg-brand-main text-white flex items-center justify-center font-black shrink-0">3</div>
                                         <div>
-                                            <h4 className="font-black uppercase text-sm mb-1">Engineer Services</h4>
-                                            <p className="text-slate-500 text-sm">In the <b className="text-brand-black font-bold uppercase text-[12px]">Builder</b>, select the specific items used for a service. The lab adds the labor time to the product cost to find your <b className="text-brand-main font-bold">Minimum Price</b>.</p>
+                                            <h4 className="font-black uppercase text-sm mb-1">Engineer Your Services</h4>
+                                            <p className="text-slate-500 text-sm">In the <b className="text-brand-black font-bold uppercase text-[12px]">Builder</b>, select the specific products used for each treatment. The Lab combines your labour time with your product costs to find your <b className="text-brand-main font-bold">Minimum Viable Price</b>.</p>
                                         </div>
                                     </div>
                                     <div className="flex gap-6">
                                         <div className="w-10 h-10 rounded-full bg-brand-main text-white flex items-center justify-center font-black shrink-0">4</div>
                                         <div>
                                             <h4 className="font-black uppercase text-sm mb-1">Review & Save</h4>
-                                            <p className="text-slate-500 text-sm">Save your engineered services to the <b className="text-brand-black font-bold uppercase text-[12px]">Menu</b>. If your costs go up later, update it once in Goals, and every service on your menu will update automatically!</p>
+                                            <p className="text-slate-500 text-sm">Save your engineered services to the <b className="text-brand-black font-bold uppercase text-[12px]">List of Services</b>. If your costs increase later, simply update your overheads in Goals, and every service on your List of Services will update automatically!</p>
                                         </div>
                                     </div>
                                 </div>
